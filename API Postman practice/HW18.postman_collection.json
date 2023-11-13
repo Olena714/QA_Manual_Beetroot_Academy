@@ -1,0 +1,353 @@
+{
+	"info": {
+		"_postman_id": "ec3e8bf2-c715-4b95-8428-7b8d934c4f73",
+		"name": "HW18",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "30342125",
+		"_collection_link": "https://gold-firefly-259945.postman.co/workspace/HW~b7329f76-fb04-4a4f-a796-84b40d56f808/collection/30342125-ec3e8bf2-c715-4b95-8428-7b8d934c4f73?action=share&source=collection_link&creator=30342125"
+	},
+	"item": [
+		{
+			"name": "CREATE user_1",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"name\":\"maryna\",\r\n\"age\":26,\r\n\"gender\":\"female\",\r\n\"city\":\"odesa\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "https://em.staging.api.onereach.ai/http/1b3bebb7-e882-4f1e-a74b-ee381bfa69d6/users"
+			},
+			"response": []
+		},
+		{
+			"name": "CREATE user_2",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"name\":\"oleksandr\",\r\n\"age\":32,\r\n\"gender\":\"male\",\r\n\"city\":\"chornomorsk\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "https://em.staging.api.onereach.ai/http/1b3bebb7-e882-4f1e-a74b-ee381bfa69d6/users"
+			},
+			"response": []
+		},
+		{
+			"name": "CREATE user_3_without city",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"name\":\"oleksii\",\r\n\"age\":34,\r\n\"gender\":\"male\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "https://em.staging.api.onereach.ai/http/1b3bebb7-e882-4f1e-a74b-ee381bfa69d6/users"
+			},
+			"response": []
+		},
+		{
+			"name": "CREATE user_3_400",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"name\":\"nataly\",\r\n\"age\": 40,\r\n\"gender\":\"1111\",\r\n\"city\":\"chornomorsk\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "https://em.staging.api.onereach.ai/http/1b3bebb7-e882-4f1e-a74b-ee381bfa69d6/users"
+			},
+			"response": []
+		},
+		{
+			"name": "user_1",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://em.staging.api.onereach.ai/http/1b3bebb7-e882-4f1e-a74b-ee381bfa69d6/users?id=5f5741cf-5f78-4837-bfe4-7d1e85e103a3",
+					"protocol": "https",
+					"host": [
+						"em",
+						"staging",
+						"api",
+						"onereach",
+						"ai"
+					],
+					"path": [
+						"http",
+						"1b3bebb7-e882-4f1e-a74b-ee381bfa69d6",
+						"users"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "5f5741cf-5f78-4837-bfe4-7d1e85e103a3"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user_2",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://em.staging.api.onereach.ai/http/1b3bebb7-e882-4f1e-a74b-ee381bfa69d6/users?id=404bd3bd-e0de-47c4-bf3d-259935189b21",
+					"protocol": "https",
+					"host": [
+						"em",
+						"staging",
+						"api",
+						"onereach",
+						"ai"
+					],
+					"path": [
+						"http",
+						"1b3bebb7-e882-4f1e-a74b-ee381bfa69d6",
+						"users"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "404bd3bd-e0de-47c4-bf3d-259935189b21"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user_3_invalid",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://em.staging.api.onereach.ai/http/1b3bebb7-e882-4f1e-a74b-ee381bfa69d6/users?id=oleksii",
+					"protocol": "https",
+					"host": [
+						"em",
+						"staging",
+						"api",
+						"onereach",
+						"ai"
+					],
+					"path": [
+						"http",
+						"1b3bebb7-e882-4f1e-a74b-ee381bfa69d6",
+						"users"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "oleksii"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user_2_the age has not changed",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"id\": \"64a05f71-641d-4e92-94bf-cbefddaae622\",\r\n\"name\":\"testtest\",\r\n\"age\":50,\r\n\"gender\":\"female\",\r\n\"city\":\"odesa\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://em.staging.api.onereach.ai/http/1b3bebb7-e882-4f1e-a74b-ee381bfa69d6/users?id=5f5741cf-5f78-4837-bfe4-7d1e85e103a3",
+					"protocol": "https",
+					"host": [
+						"em",
+						"staging",
+						"api",
+						"onereach",
+						"ai"
+					],
+					"path": [
+						"http",
+						"1b3bebb7-e882-4f1e-a74b-ee381bfa69d6",
+						"users"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "5f5741cf-5f78-4837-bfe4-7d1e85e103a3"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user_3_added the city",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"id\": \"2a6d1e20-948c-4882-85d3-cd09550cf579\",\r\n\"name\":\"oleksii\",\r\n\"age\":35,\r\n\"gender\":\"male\",\r\n\"city\":\"odesa\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://em.staging.api.onereach.ai/http/1b3bebb7-e882-4f1e-a74b-ee381bfa69d6/users?id=5f5741cf-5f78-4837-bfe4-7d1e85e103a3",
+					"protocol": "https",
+					"host": [
+						"em",
+						"staging",
+						"api",
+						"onereach",
+						"ai"
+					],
+					"path": [
+						"http",
+						"1b3bebb7-e882-4f1e-a74b-ee381bfa69d6",
+						"users"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "5f5741cf-5f78-4837-bfe4-7d1e85e103a3"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user_1",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"id\": \"2a6d1e20-948c-4882-85d3-cd09550cf579\",\r\n\"name\":\"oleksii\",\r\n\"age\":35,\r\n\"gender\":\"male\",\r\n\"city\":\"odesa\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://em.staging.api.onereach.ai/http/1b3bebb7-e882-4f1e-a74b-ee381bfa69d6/users?id=5f5741cf-5f78-4837-bfe4-7d1e85e103a3",
+					"protocol": "https",
+					"host": [
+						"em",
+						"staging",
+						"api",
+						"onereach",
+						"ai"
+					],
+					"path": [
+						"http",
+						"1b3bebb7-e882-4f1e-a74b-ee381bfa69d6",
+						"users"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "5f5741cf-5f78-4837-bfe4-7d1e85e103a3"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user_1_name instead of id",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"id\": \"2a6d1e20-948c-4882-85d3-cd09550cf579\",\r\n\"name\":\"oleksii\",\r\n\"age\":35,\r\n\"gender\":\"male\",\r\n\"city\":\"odesa\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://em.staging.api.onereach.ai/http/1b3bebb7-e882-4f1e-a74b-ee381bfa69d6/users?id=oleksii",
+					"protocol": "https",
+					"host": [
+						"em",
+						"staging",
+						"api",
+						"onereach",
+						"ai"
+					],
+					"path": [
+						"http",
+						"1b3bebb7-e882-4f1e-a74b-ee381bfa69d6",
+						"users"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "oleksii"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
