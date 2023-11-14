@@ -1,0 +1,326 @@
+{
+  "id": "32627d01-bb1c-450d-bdfe-8c0251d35829",
+  "version": "2.0",
+  "name": "HW_25",
+  "url": "https://www.gorgany.com/",
+  "tests": [{
+    "id": "4befe424-a3a8-4225-b87f-aeb5665a1616",
+    "name": "Untitled",
+    "commands": []
+  }, {
+    "id": "02f6aab6-e691-42aa-8b09-a006213cc307",
+    "name": "Add a product to the cart through the catalog",
+    "commands": [{
+      "id": "1b1ffc54-77d0-4026-825a-0b40c2a28f56",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "afd3c7ec-75ab-4611-8a7b-a050cadaf7fc",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=.category-item-1 .ammenu-text",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "838f3f17-7d69-45a6-a2bf-fc7681408f07",
+      "comment": "",
+      "command": "assertNotText",
+      "target": "css=.category-item-1 .ammenu-text",
+      "targets": [],
+      "value": "Обувь"
+    }, {
+      "id": "cc28f564-ab74-4e8e-abf5-e5376e6c9906",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.category-item-1 .ammenu-text",
+      "targets": [],
+      "value": "ВЗУТТЯ"
+    }, {
+      "id": "f471e889-6cd0-4c09-a774-d1758babbf5e",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//body[@id='html-body']/div[3]/section/section/nav/ul/li[2]/a/span/span",
+      "targets": [
+        ["css=.category-item-1 .ammenu-text", "css:finder"],
+        ["xpath=//body[@id='html-body']/div[3]/section/section/nav/ul/li[2]/a/span/span", "xpath:idRelative"],
+        ["xpath=//li[2]/a/span/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d6539fb7-8179-40f4-8562-57ea3cbb66c2",
+      "comment": "",
+      "command": "click",
+      "target": "css=.supercat-item:nth-child(2) > .supercat-prev",
+      "targets": [
+        ["linkText=Кросівки", "linkText"],
+        ["css=.supercat-item:nth-child(2) > .supercat-prev", "css:finder"],
+        ["xpath=(//a[contains(text(),'Кросівки')])[2]", "xpath:link"],
+        ["xpath=//body[@id='html-body']/div[3]/div[3]/div/div/div/div[2]/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, 'vzuttia/krosivky')])[11]", "xpath:href"],
+        ["xpath=//div/div[2]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "7e7daad2-7058-4faf-8a86-44d85f664b08",
+      "comment": "",
+      "command": "click",
+      "target": "css=.product-image-container-109214 .product-image-photo",
+      "targets": [
+        ["css=.product-image-container-109214 .product-image-photo", "css:finder"],
+        ["xpath=//img[@alt='Кросівки Merrell Alverstone 2 GTX Mns']", "xpath:img"],
+        ["xpath=//div[@id='product-item-info_109214']/a/span/span/img", "xpath:idRelative"],
+        ["xpath=//span/img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d652b634-dfcd-4a44-b0ec-96cc9863beab",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "xpath=//div[@id='option-label-size-168-item-10104']",
+      "targets": [
+        ["id=option-label-size-168-item-10104", "id"],
+        ["css=#option-label-size-168-item-10104", "css:finder"],
+        ["xpath=//div[@id='option-label-size-168-item-10104']", "xpath:attributes"],
+        ["xpath=//div[@id='swatch-attribute-options-168']/div[2]", "xpath:idRelative"],
+        ["xpath=//form/div/div/div/div[2]/div/div[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "02904816-6e73-4ab2-87ce-5d95c663ebb8",
+      "comment": "",
+      "command": "click",
+      "target": "css=#option-label-size-168-item-10104",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "bb068afc-46b6-4ad8-9af8-3d3239f53cc9",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "xpath=//button[@id='product-addtocart-button']/span",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0ef7144b-cbcf-4fa5-b5ca-d58236863045",
+      "comment": "",
+      "command": "assertNotText",
+      "target": "xpath=//button[@id='product-addtocart-button']/span",
+      "targets": [],
+      "value": "Купить"
+    }, {
+      "id": "2210a73e-f26b-45f8-9670-d768cc3117c1",
+      "comment": "",
+      "command": "assertText",
+      "target": "xpath=//button[@id='product-addtocart-button']/span",
+      "targets": [],
+      "value": "Купити"
+    }, {
+      "id": "0bb00d51-d7e5-4c18-b34a-8d421a80111e",
+      "comment": "",
+      "command": "click",
+      "target": "css=#product-addtocart-button > span",
+      "targets": [
+        ["css=#product-addtocart-button > span", "css:finder"],
+        ["xpath=//button[@id='product-addtocart-button']/span", "xpath:idRelative"],
+        ["xpath=//div[3]/div/div[2]/button/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Купити')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "f57ecaf2-534a-45da-86a3-120f82cc35d8",
+    "name": "Add a product to the cart through the search string",
+    "commands": [{
+      "id": "fe4f243a-3d52-45db-8ea2-ca6febce1f12",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "65ae396a-d88c-46af-898d-272361cf1b5b",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=.amsearch-input",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "23f53e08-af8b-4abf-a316-bda63f46aa5e",
+      "comment": "",
+      "command": "click",
+      "target": "name=q",
+      "targets": [
+        ["name=q", "name"],
+        ["css=.amsearch-input", "css:finder"],
+        ["xpath=//input[@name='q']", "xpath:attributes"],
+        ["xpath=//header[@id='ammenu-header-container']/div[2]/section/div/section/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d3471d47-cfc4-4412-a41e-752f98211290",
+      "comment": "",
+      "command": "type",
+      "target": "css=.amsearch-input",
+      "targets": [],
+      "value": "кросівки Merrell"
+    }, {
+      "id": "e594e5e8-a9a0-4c35-9179-73313bfad425",
+      "comment": "",
+      "command": "click",
+      "target": "css=.product-image-container-109214 .product-image-photo",
+      "targets": [
+        ["css=.product-image-container-109214 .product-image-photo", "css:finder"],
+        ["xpath=//img[@alt='Кросівки Merrell Alverstone 2 GTX Mns']", "xpath:img"],
+        ["xpath=//div[@id='amasty-shopby-product-list']/ul/li/a/span/span/img", "xpath:idRelative"],
+        ["xpath=//span/img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d5b26ab0-83d7-4a68-9f6f-517830192ea0",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=.color",
+      "targets": [
+        ["css=.color", "css:finder"],
+        ["xpath=//div[@id='product-options-wrapper']/div/div/div", "xpath:idRelative"],
+        ["xpath=//form/div/div/div/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "114d2c41-a92b-4e77-88bc-b1223e8ed544",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=#option-label-size-168-item-10106",
+      "targets": [
+        ["id=option-label-size-168-item-10106", "id"],
+        ["css=#option-label-size-168-item-10106", "css:finder"],
+        ["xpath=//div[@id='option-label-size-168-item-10106']", "xpath:attributes"],
+        ["xpath=//div[@id='swatch-attribute-options-168']/div[3]", "xpath:idRelative"],
+        ["xpath=//form/div/div/div/div[2]/div/div[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "0bb210f5-4883-46a2-abde-c70178896c58",
+      "comment": "",
+      "command": "click",
+      "target": "css=#option-label-size-168-item-10106",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e754bf71-e885-4eed-8b4b-6ad27957aa00",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=#product-addtocart-button > span",
+      "targets": [
+        ["css=#product-addtocart-button > span", "css:finder"],
+        ["xpath=//button[@id='product-addtocart-button']/span", "xpath:idRelative"],
+        ["xpath=//div[3]/div/div[2]/button/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Купити')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "e440e236-bd07-41ae-a2f2-76379aa88244",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//div[3]/div/div[2]/button/span",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "1fe18ac7-3155-4708-a9d4-250a9ed1d371",
+    "name": "Checking the presence of icons in the header",
+    "commands": [{
+      "id": "22033f52-2c8b-4d1e-9307-68b7aedc09e6",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a77737d2-b179-422b-b721-d60b8bd57ed4",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=.authorization-link > a",
+      "targets": [
+        ["linkText=Увійти", "linkText"],
+        ["css=.authorization-link > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Увійти')]", "xpath:link"],
+        ["xpath=//header[@id='ammenu-header-container']/div[2]/ul[2]/li[2]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'https://www.gorgany.com/customer/account/login/referer/aHR0cHM6Ly93d3cuZ29yZ2FueS5jb20v/')]", "xpath:href"],
+        ["xpath=//ul[2]/li[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Увійти')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "7ec98ba5-4d8b-4d0a-9807-f6a3c3e3605f",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=.wishlist > a",
+      "targets": [
+        ["css=.wishlist > a", "css:finder"],
+        ["xpath=//header[@id='ammenu-header-container']/div[2]/div/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'https://www.gorgany.com/wishlist/')]", "xpath:href"],
+        ["xpath=//div[2]/div/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "89eb0fa1-efe0-46b3-bb0e-c349e43125f5",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "xpath=//header[@id='ammenu-header-container']/div[2]/ul/li/a",
+      "targets": [
+        ["linkText=Порівняння", "linkText"],
+        ["css=.item > .action", "css:finder"],
+        ["xpath=//header[@id='ammenu-header-container']/div[2]/ul/li/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'https://www.gorgany.com/catalog/product_compare/index/uenc/aHR0cHM6Ly93d3cuZ29yZ2FueS5jb20vY3VzdG9tZXIvc2VjdGlvbi9sb2FkLz9zZWN0aW9ucz1jb21wYXJlLXByb2R1Y3RzJl89MTY5ODQxNTI4MzM4MA%2C%2C/')]", "xpath:href"],
+        ["xpath=//header/div[2]/ul/li/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Порівняння')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "b136e00e-fa70-48c1-99a9-d47df889a601",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=.showcart",
+      "targets": [
+        ["css=.showcart", "css:finder"],
+        ["xpath=(//button[@type='button'])[2]", "xpath:attributes"],
+        ["xpath=//header[@id='ammenu-header-container']/div[2]/div[2]/button", "xpath:idRelative"],
+        ["xpath=//div[2]/div[2]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Кошик')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "8474d228-002d-4920-b10a-67d4a66497c5",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "xpath=//header[@id='ammenu-header-container']/div[2]/div[3]/div/div",
+      "targets": [
+        ["css=.header-phones .action", "css:finder"],
+        ["xpath=//header[@id='ammenu-header-container']/div[2]/div[3]/div/div", "xpath:idRelative"],
+        ["xpath=//header/div[2]/div[3]/div/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "16ec8037-9707-4aef-bd99-ba9a47f668f1",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.header-phones .action",
+      "targets": [],
+      "value": "(067) 353 37 27"
+    }, {
+      "id": "acfb77bd-0f19-438c-9c14-869bed8f86b3",
+      "comment": "",
+      "command": "assertNotText",
+      "target": "css=.header-phones .action",
+      "targets": [],
+      "value": "(097) 388 94 21"
+    }]
+  }],
+  "suites": [],
+  "urls": ["https://www.gorgany.com/"],
+  "plugins": []
+}
